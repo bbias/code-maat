@@ -1,11 +1,9 @@
-[![Build Status](https://travis-ci.org/adamtornhill/code-maat.png)](https://travis-ci.org/adamtornhill/code-maat)
-
 # Code Maat
 
 Code Maat is a command line tool used to mine and analyze data from version-control systems (VCS).
 
-Code Maat was developed to accompany the discussions in my books [Your Code as a Crime Scene](https://pragprog.com/book/atcrime/your-code-as-a-crime-scene) and
-[Software Design X-Rays](https://pragprog.com/book/atevol/software-design-x-rays).
+Code Maat was developed to accompany the discussions in my books [Your Code as a Crime Scene](https://pragprog.com/titles/atcrime/your-code-as-a-crime-scene) and
+[Software Design X-Rays](https://pragprog.com/titles/atevol/software-design-x-rays).
 
 Note that the analyses have evolved into [CodeScene](https://codescene.io/), which automates all the analyses found in Code Maat and several new ones.
 
@@ -14,6 +12,8 @@ Note that the analyses have evolved into [CodeScene](https://codescene.io/), whi
 [![CodeScene Code Health](https://codescene.io/projects/87/status-badges/code-health)](https://codescene.io/projects/6410/jobs/latest-successful/results)
 
 [![CodeScene System Mastery](https://codescene.io/projects/87/status-badges/system-mastery)](https://codescene.io/projects/6410/jobs/latest-successful/results)
+
+Code Health badges via CodeScene's [free community edition](https://codescene.com/product/codescene-for-open-source).
 
 ## The ideas behind Code Maat
 
@@ -62,6 +62,11 @@ To analyze our VCS data we need to define a temporal period of interest. Over ti
 + *svn:* Use the `-r` option to specify a range of interest, for example `-r {20130820}:HEAD`.
 + *p4:* Use the `-m` option to specify the last specified number of changelists, for example `-m 1000`.
 + *tfs:* Use the `/stopafter` option to specify the number of changesets, for example `/stopafter:1000`
+
+#### ⚠️ Windows user? Use GitBASH when interacting with Code Maat
+
+Code Maat expects its Git logs to have UNIX line endings. If you're on windows, then the simplest solution
+is to interact with Git through a Git BASH shell that emulates a Linux environment. The Git BASH shell is distributed together with Git itself.
 
 #### Generate a Subversion log file using the following command:
 
@@ -229,7 +234,7 @@ By using the techniques from [Your Code as a Crime Scene](https://pragprog.com/b
 
 Code Maat doesn't include any visualizations itself. However, you do have a bunch of options.
 
-One option is [CodeScene](http://www.empear.com/#empear-products) which is [free for open source](https://codescene.io/) and delivers all these analyses as a service. CodeScene is also available in an [on-premise version](http://www.empear.com/products/codescene-on-premise/). CodeScene is a complete application with automated repository mining, visualizations, and is built around the ideas prototyped in Code Maat.
+One option is [CodeScene](http://www.empear.com/#empear-products) which is [free for open source](https://codescene.io/) and delivers all these analyses as a service. CodeScene is also available in an [on-premise version](https://codescene.com/pricing). CodeScene is a complete application with automated repository mining, visualizations, and is built around the ideas prototyped in Code Maat.
 
 I also present a whole suite of different visualization techniques and options in [Your Code as a Crime Scene](https://pragprog.com/book/atcrime/your-code-as-a-crime-scene), so do check out the book if you want to dive deeper. You can also look at some of the basic tools I've open sourced such as [Metrics Tree Map](https://github.com/adamtornhill/MetricsTreeMap):
 
