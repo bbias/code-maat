@@ -1,0 +1,13 @@
+{
+  "code_maat": {
+    "jar_path": "../target/code-maat-1.0.5-SNAPSHOT-standalone.jar",
+    "java_executable": "java",
+    "java_opts": ["-Xmx4g", "-Djava.awt.headless=true", "-Xss512M"]
+  },
+  "server": {
+    "name": "code-maat-mcp-server",
+    "version": "0.1.0",
+    "cache_results": true,
+    "max_cache_size": 100
+  }
+}
